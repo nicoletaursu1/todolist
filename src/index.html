@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script src="https://use.fontawesome.com/99145245ca.js"></script>
+    <div class="main">
+
+      <h1>TODO LIST</h1>
+        <form action="index.html" method="post">
+          <input type="text" placeholder="New Task" name="task">
+          <i class="fa fa-plus" id="add" aria-hidden="true"></i>
+        </form>
+      
+      <div class="tasksBoard">
+        <ul>
+          <li>
+            <label>Added Item</label>
+            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+          </li>
+          <li>
+            <label>Added Item 1</label>
+            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+          </li>
+          <li>
+            <label>Added Item 2</label>
+            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+          </li>
+          
+        </ul>
+        <a id="clear">Clear all</a>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+  
+</html>

@@ -1,0 +1,99 @@
+$md: 10vh
+$li-color: #515859 
+$orange: #F59B6D 
+$red: #AF1F1F 
+html
+  min-height: 90vh
+  background-image: linear-gradient(#D5E6E9,#8B9496 )
+  background-repeat: no-repeat
+  font-family: sans-serif
+  padding-bottom: 10vh
+
+.main
+  width: 400px
+  padding-top: $md
+  display: flex
+  justify-content: center
+  flex-direction: column
+  margin: auto
+
+h1
+  text-align: center
+  text-shadow: 1px -1px gray
+  color: white
+
+form
+  background-color: white
+  padding: 20px
+  padding-left: 40px
+  
+#add
+    font-size: 20px
+    color: $li-color
+    &:hover
+        color: $orange
+        cursor: pointer
+
+input[type="text"]
+  width: 300px
+  height: 30px
+  outline: 0
+  border: none
+  font-size: 1.5em
+  background: white
+  cursor: pointer
+
+.tasksBoard
+  background-color: white
+  margin-top: 15px
+  padding-top: 10px
+  padding-bottom: 10px
+  padding-right: 40px
+
+ul
+  list-style: none
+
+li
+  border-bottom: 1px solid grey
+  padding-bottom: 17px
+  padding-top: 17px
+  font-size: 1.3em
+  color: $li-color
+  label
+    &:hover
+      cursor: pointer
+      color: $red
+  #update, #remove
+      float: right
+      &:hover
+        cursor: pointer
+#remove
+  font-size: 21px
+  &:hover
+    color: $red
+#update
+    font-size: 20px
+    padding-right: 5px
+    &:hover
+      color: $orange
+
+a
+  float: right
+  text-align: right
+  color: $li-color
+  font-size: 1.1em
+  cursor: pointer
+  padding-bottom: 20px
+  &:hover
+      color: $orange
+
+@media (max-width: 500px) 
+  .main
+    margin: auto
+    width: 100%
+  
+  input[type="text"]
+    width: 80%
+
+  #add
+    margin-left: 40px
