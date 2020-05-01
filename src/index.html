@@ -8,37 +8,54 @@
   </head>
   <body>
     <script src="https://use.fontawesome.com/99145245ca.js"></script>
-    <div class="main">
+    
+    <nav class="navigation">
+      <ul class="menu">
+        <li><a href="#">My Tasks</a></li>
+        <li class="right-first"><a href="#">Contact us</a></li>
+        <li class="right-second"><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
 
       <h1>TODO LIST</h1>
         <form action="index.html" method="post">
           <input type="text" placeholder="New Task" name="task">
-          <i class="fa fa-plus" id="add" aria-hidden="true"></i>
+          <i class="fa fa-plus add" aria-hidden="true"></i>
         </form>
       
       <div class="tasksBoard">
         <ul>
           <li>
             <label>Added Item</label>
-            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
-            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+            <i class="fa fa-times remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil update" aria-hidden="true"></i>
           </li>
           <li>
             <label>Added Item 1</label>
-            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
-            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+            <i class="fa fa-times remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil update" aria-hidden="true"></i>
           </li>
           <li>
             <label>Added Item 2</label>
-            <i class="fa fa-times" id="remove" aria-hidden="true"></i>
-            <i class="fa fa-pencil" id="update" aria-hidden="true"></i>
+            <i class="fa fa-times remove" aria-hidden="true"></i>
+            <i class="fa fa-pencil update" aria-hidden="true"></i>
           </li>
           
         </ul>
-        <a id="clear">Clear all</a>
+        <a class="clear">Clear all</a>
       </div>
 
-    </div>
+    </section>
+
+    <footer>
+      <p>&copy Copyright TODO LIST <span id="currYear"></span></p>
+    </footer>
+    <script>
+      let year=new Date().getFullYear();
+      document.getElementById("currYear").innerHTML = year;
+    </script>
     <script type="text/javascript" src="index.js"></script>
   </body>
   

@@ -1,15 +1,79 @@
 html {
-  min-height: 90vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#D5E6E9), to(#8B9496));
-  background-image: linear-gradient(#D5E6E9, #8B9496);
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F9DEC0), to(#C8A38F));
+  background-image: linear-gradient(#F9DEC0, #C8A38F);
   background-repeat: no-repeat;
   font-family: sans-serif;
-  padding-bottom: 10vh;
+}
+
+body {
+  margin: 0;
+}
+
+.navigation {
+  line-height: 2;
+  background-color: rgba(54, 95, 124, 0.5);
+}
+
+.navigation a, .navigation li {
+  display: block;
+}
+
+.navigation a:hover, .navigation li:hover {
+  color: #F9DEC0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+}
+
+.navigation li {
+  padding: 0.7vh 5vw;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navigation {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .navigation .menu {
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation .menu > li {
+    border: none;
+    padding: 0 10px;
+  }
+  .navigation .menu > li > a {
+    padding: 1.25em 0;
+  }
 }
 
 .main {
   width: 400px;
-  padding-top: 10vh;
+  padding-top: 7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,14 +99,16 @@ form {
   padding-left: 40px;
 }
 
-#add {
+form .add {
   font-size: 20px;
   color: #515859;
 }
 
-#add:hover {
-  color: #F59B6D;
+form .add:hover {
+  color: #F9DEC0;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 input[type="text"] {
@@ -63,11 +129,11 @@ input[type="text"] {
   padding-right: 40px;
 }
 
-ul {
+.tasksBoard > ul {
   list-style: none;
 }
 
-li {
+.tasksBoard > ul li {
   border-bottom: 1px solid grey;
   padding-bottom: 17px;
   padding-top: 17px;
@@ -75,37 +141,45 @@ li {
   color: #515859;
 }
 
-li label:hover {
+.tasksBoard > ul label:hover {
   cursor: pointer;
   color: #AF1F1F;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-li #update, li #remove {
+.tasksBoard > ul .update, .tasksBoard > ul .remove {
   float: right;
 }
 
-li #update:hover, li #remove:hover {
+.tasksBoard > ul .update:hover, .tasksBoard > ul .remove:hover {
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-#remove {
+.remove {
   font-size: 21px;
 }
 
-#remove:hover {
+.remove:hover {
   color: #AF1F1F;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-#update {
+.update {
   font-size: 20px;
   padding-right: 5px;
 }
 
-#update:hover {
-  color: #F59B6D;
+.update:hover {
+  color: #F9DEC0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-a {
+.clear {
   float: right;
   text-align: right;
   color: #515859;
@@ -114,8 +188,16 @@ a {
   padding-bottom: 20px;
 }
 
-a:hover {
-  color: #F59B6D;
+.clear:hover {
+  color: #F9DEC0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer > p {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 12vh 0 3vh 0;
 }
 
 @media (max-width: 500px) {
@@ -126,7 +208,7 @@ a:hover {
   input[type="text"] {
     width: 80%;
   }
-  #add {
+  .add {
     margin-left: 40px;
   }
 }
