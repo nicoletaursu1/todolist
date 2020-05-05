@@ -7,9 +7,6 @@
 
 //  app.appendChild(changed);
 
-
-
-
 //////////////it's a mess now, it will get better :D
 //counter in development now
 import LocalStorageManager from './js/localStorage.js'
@@ -42,24 +39,38 @@ localStorageManager.state = [{ isDone: 1, text: 'To buy some milk with cookies',
 console.log(localStorageManager.state)
 
 //counter function
-const createCounter=()=>{
-    let i=0;
-    return ()=>{
-       return i++
-    }
-}
+// const createCounter=()=>{
+//     let i=0;
+//    return ()=>{
+//        return i++
+//     }
+// } 
 
 //active tasks
-let counter1=createCounter()
-const activeItems=document.getElementById('activeItems')
-const counter=
-activeItems.append(counter1())
+const counter=document.getElementById('counter')
+counter.innerHTML=createCounter()()
+
 
 const addListItem = (text) => {
     const li = document.createElement('li')
-    li.textContent=text
+    li.appendChild(document.createTextNode(text))
+
+    const removeBtn=document.createElement('i')
+    const updateBtn=document.createElement('i')
+    removeBtn.className="fa fa-times remove"
+    updateBtn.className="fa fa-pencil update"
+    li.appendChild(removeBtn)
+    li.appendChild(updateBtn)
     ul.appendChild(li)
 }
+//remove item
+ul.addEventListener('click', e=>{
+    if(e.target.classList.contains('remove')){
+        var li = e.target.parentElement
+        ul.removeChild(li)
+        localStorage.removeItem('items')
+    }
+})
 
 //on submit
 form.addEventListener('submit', event => {
@@ -68,8 +79,6 @@ form.addEventListener('submit', event => {
     localStorage.setItem('items', JSON.stringify(itemsArray))
     addListItem(input.value)
     input.value=''
-    let counter2=createCounter()
-    counter2()
 
 })
 
@@ -80,8 +89,8 @@ data.forEach(item => {
 })
 
 
-clear.addEventListener('click', function() {
-    localStorage.clear('items')
+clear.addEventListener('click', () => {
+    localStorage.removeItem('items')
     while(ul.firstChild){
         ul.removeChild(ul.firstChild)
     }

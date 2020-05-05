@@ -135,6 +135,10 @@ input[type="text"] {
   padding-right: 40px;
 }
 
+.activeItems {
+  padding-left: 40px;
+}
+
 .tasksBoard > ul {
   list-style: none;
 }
