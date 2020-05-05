@@ -111,6 +111,12 @@ form .add:hover {
   transition: 0.3s;
 }
 
+form button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 input[type="text"] {
   width: 300px;
   height: 30px;

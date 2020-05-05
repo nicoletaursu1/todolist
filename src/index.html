@@ -11,52 +11,47 @@
     
     <nav class="navigation">
       <ul class="menu">
-        <li><a href="#">My Tasks</a></li>
-        <li class="right-first"><a href="#">Contact us</a></li>
-        <li class="right-second"><a href="#">About</a></li>
+        <li><a href="#">Incomplete tasks</a></li>
+        <li><a href="#">Complete Tasks</a></li>
       </ul>
     </nav>
+<!--The list---------------------------------------------->
+    <div id="app"></div>
 
     <section class="main">
-
       <h1>TODO LIST</h1>
-        <form action="index.html" method="post">
-          <input type="text" placeholder="New Task" name="task">
-          <i class="fa fa-plus add" aria-hidden="true"></i>
+
+        <form class="form" action="index.html" method="post">
+          <input type="text" id="addInput" placeholder="New Task" name="task">
+          <button type="submit" id="addButton"><i class="fa fa-plus add" aria-hidden="true"></i></button>
         </form>
       
-      <div class="tasksBoard">
-        <ul>
-          <li>
+      <div class="tasksBoard" >
+        <p id="activeItems">Active Items: </p>
+        <ul id="itemList">
+          <!-- <li>
             <label>Added Item</label>
             <i class="fa fa-times remove" aria-hidden="true"></i>
             <i class="fa fa-pencil update" aria-hidden="true"></i>
-          </li>
-          <li>
-            <label>Added Item 1</label>
-            <i class="fa fa-times remove" aria-hidden="true"></i>
-            <i class="fa fa-pencil update" aria-hidden="true"></i>
-          </li>
-          <li>
-            <label>Added Item 2</label>
-            <i class="fa fa-times remove" aria-hidden="true"></i>
-            <i class="fa fa-pencil update" aria-hidden="true"></i>
-          </li>
-          
+          </li> -->
         </ul>
-        <a class="clear">Clear all</a>
+        <a class="clear" id="clearLS">Clear all</a>
       </div>
 
     </section>
-
+<!-------------------------------------------------------->
     <footer>
       <p>&copy Copyright TODO LIST <span id="currYear"></span></p>
     </footer>
+
+
     <script>
       let year=new Date().getFullYear();
       document.getElementById("currYear").innerHTML = year;
     </script>
+
     <script type="module" src="index.js"></script>
+
+
   </body>
-  
 </html>

@@ -5,12 +5,25 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+<<<<<<< HEAD
     entry: './src/index.js',
+=======
+    entry: path.resolve(__dirname, 'src/index.js'),
+>>>>>>> 47749626a4b6a3bee81e9ca2c9bd7d3905822f31
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+<<<<<<< HEAD
 
+=======
+    resolve: {
+        modules: [
+            path.resolve(__dirname, 'node_modules'),
+            path.resolve(__dirname, './src'),
+        ]
+    },
+>>>>>>> 47749626a4b6a3bee81e9ca2c9bd7d3905822f31
     module: {
         rules: [
             {
@@ -19,7 +32,18 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
+<<<<<<< HEAD
                         presets: ['@babel/preset-env']
+=======
+                        presets: [
+                            '@babel/preset-env',
+                            {
+                                'plugins': [
+                                    "@babel/plugin-proposal-class-properties"
+                                ]
+                            }
+                        ]
+>>>>>>> 47749626a4b6a3bee81e9ca2c9bd7d3905822f31
                     }
                 }
             },
@@ -46,7 +70,13 @@ module.exports = {
         new extract({
             filename: 'bundle.css'
         }),
+<<<<<<< HEAD
         new HtmlWebpackPlugin(),
+=======
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/index.html'),
+        }),
+>>>>>>> 47749626a4b6a3bee81e9ca2c9bd7d3905822f31
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false })
     ],
     devServer: {
