@@ -16,7 +16,6 @@
       </ul>
     </nav>
 <!--The list---------------------------------------------->
-    <div id="app"></div>
 
     <section class="main">
       <h1>TODO LIST</h1>
@@ -35,6 +34,14 @@
       </div>
 
     </section>
+    <template id='itemTemplate'>
+      <li>
+        <input type='checkbox' />
+        <label></label>
+        <i class='fa fa-times remove'></i>
+        <i class='fa fa-pencil update'></i>
+      </li>
+    </template>
 <!-------------------------------------------------------->
     <footer>
       <p>&copy Copyright TODO LIST <span id="currYear"></span></p>

@@ -1,14 +1,10 @@
-class LocalStorageManager{
-    field;
-    _state=[{
-        isDone: 0, 
-        text: 'To buy some milk', 
-        date: '14.07.2020', 
-        id: '123' 
-    }]
 
-    constructor(field){
-        this.field=field
+class LocalStorageManager{
+    _state = []
+    keyName
+    
+    constructor(key){
+        this.keyName=key
     }
     
     get state(){
@@ -23,5 +19,4 @@ class LocalStorageManager{
 
     
 }
-
 export default LocalStorageManager
