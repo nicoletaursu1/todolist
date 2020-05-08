@@ -54,10 +54,8 @@ const counterFunc = () => {
 form.addEventListener('submit', event => {
     event.preventDefault()
     const inputValue = input.value
-    // const item = addItem(inputValue)
     const task = new Task(inputValue)
     input.value = ''
-    //itemsArray.push(item)
     console.log(task)
     App.addItemToList(task)
 })
