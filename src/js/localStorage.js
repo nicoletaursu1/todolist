@@ -8,7 +8,9 @@ class LocalStorageManager{
     }
     
     get state(){
-        this._state=JSON.parse(localStorage.getItem('app'));
+        this._state=localStorage.getItem('app')
+            ? JSON.parse(localStorage.getItem('app'))
+            : []
         return this._state
     }
 
